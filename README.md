@@ -4,7 +4,7 @@
 
 # TryJsonConvert
 
-
+Provides try-method extensions for Newtonsoft.Json to safely attempt serialization and deserialization.
 
 ## License
 

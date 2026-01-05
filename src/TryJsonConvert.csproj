@@ -9,7 +9,7 @@
     <FileVersion>13.0.4</FileVersion>
     <Version>$(VersionPrefix)13.0.4</Version>
     <Authors>ema</Authors>
-    <Description>Bring try-method to Newtonsoft.Json</Description>
+    <Description>Provides try-method extensions for Newtonsoft.Json to safely attempt serialization and deserialization.</Description>
     <PackageProjectUrl>https://github.com/emako/TryJsonConvert</PackageProjectUrl>
     <RepositoryUrl>https://github.com/emako/TryJsonConvert</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
