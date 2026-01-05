@@ -6,6 +6,42 @@ namespace Newtonsoft.Json;
 
 public static partial class JsonTryConvert
 {
+    public static bool TrySerialize<T>(T? value, out string? json)
+    {
+        return TrySerialize(value, typeof(T), default(JsonSerializerSettings), out json);
+    }
+
+    public static bool TrySerialize<T>(T? value, Formatting formatting, out string? json)
+    {
+        return TrySerialize(value, typeof(T), new JsonSerializerSettings()
+        {
+            Formatting = formatting,
+        }, out json);
+    }
+
+    public static bool TrySerialize<T>(T? value, Formatting formatting, out string? json, params JsonConverter[] converters)
+    {
+        JsonSerializerSettings? settings = (converters != null && converters.Length > 0)
+            ? new JsonSerializerSettings { Converters = converters, Formatting = formatting }
+            : null;
+
+        return TrySerialize(value, typeof(T), settings, out json);
+    }
+
+    public static bool TrySerialize<T>(T? value, out string? json, params JsonConverter[] converters)
+    {
+        JsonSerializerSettings? settings = (converters != null && converters.Length > 0)
+            ? new JsonSerializerSettings { Converters = converters }
+            : null;
+
+        return TrySerialize(value, typeof(T), settings, out json);
+    }
+
+    public static bool TrySerialize<T>(T? value, JsonSerializerSettings? settings, out string? json)
+    {
+        return TrySerialize(value, typeof(T), settings, out json);
+    }
+
     public static bool TryDeserialize<T>(string json, out T? value)
     {
         return TryDeserialize(json, default(JsonSerializerSettings), out value);
