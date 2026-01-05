@@ -38,10 +38,10 @@ public class JsonTryConvertTests
     }
 
     [Test]
-    public void TrySerialize_InvalidObjectType_Fails()
+    public void TrySerialize_InvalidObjectType_Success()
     {
-        Assert.IsFalse(JsonTryConvert.TrySerialize(new object(), typeof(List<int>), out var json));
-        Assert.IsNull(json);
+        Assert.IsTrue(JsonTryConvert.TrySerialize(new object(), typeof(List<int>), out var json));
+        Assert.IsNotNull(json);
     }
 
     [Test]

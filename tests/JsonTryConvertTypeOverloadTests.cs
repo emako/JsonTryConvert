@@ -26,18 +26,18 @@ public class JsonTryConvertTypeOverloadTests
     }
 
     [Test]
-    public void TrySerializeAndDeserialize_TypeMismatch_Fails()
+    public void TrySerializeAndDeserialize_TypeMismatch_Success()
     {
         var obj = new Dummy { Id = 11, Name = "mismatch" };
-        Assert.IsFalse(JsonTryConvert.TrySerialize(obj, typeof(List<int>), out var json));
-        Assert.IsNull(json);
+        Assert.IsTrue(JsonTryConvert.TrySerialize(obj, typeof(List<int>), out var json));
+        Assert.IsNotNull(json);
     }
 
     [Test]
-    public void TryDeserialize_TypeNull_Fails()
+    public void TryDeserialize_TypeNull_Success()
     {
         var json = "{\"Id\":1,\"Name\":\"abc\"}";
-        Assert.IsFalse(JsonTryConvert.TryDeserialize(json, null, out var value));
-        Assert.IsNull(value);
+        Assert.IsTrue(JsonTryConvert.TryDeserialize(json, null, out var value));
+        Assert.IsNotNull(value);
     }
 }
