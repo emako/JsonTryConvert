@@ -4,15 +4,30 @@ using System.Collections.Generic;
 
 namespace TryJsonConvert.Tests;
 
+/// <summary>
+/// Unit tests for type overload scenarios in JsonTryConvert.
+/// </summary>
 [TestFixture]
 public class JsonTryConvertTypeOverloadTests
 {
+    /// <summary>
+    /// Dummy class for testing serialization and deserialization.
+    /// </summary>
     public class Dummy
     {
+        /// <summary>
+        /// Gets or sets the Id.
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Gets or sets the Name.
+        /// </summary>
         public string? Name { get; set; }
     }
 
+    /// <summary>
+    /// Tests serialization and deserialization with a null type parameter.
+    /// </summary>
     [Test]
     public void TrySerializeAndDeserialize_TypeNull_Success()
     {
@@ -25,6 +40,9 @@ public class JsonTryConvertTypeOverloadTests
         Assert.AreEqual("type-null", ((Dummy)result!).Name);
     }
 
+    /// <summary>
+    /// Tests serialization with a mismatched type parameter.
+    /// </summary>
     [Test]
     public void TrySerializeAndDeserialize_TypeMismatch_Success()
     {
@@ -33,6 +51,9 @@ public class JsonTryConvertTypeOverloadTests
         Assert.IsNotNull(json);
     }
 
+    /// <summary>
+    /// Tests deserialization with a null type parameter.
+    /// </summary>
     [Test]
     public void TryDeserialize_TypeNull_Success()
     {

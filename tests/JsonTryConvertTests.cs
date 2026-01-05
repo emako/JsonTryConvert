@@ -4,15 +4,30 @@ using System.Collections.Generic;
 
 namespace TryJsonConvert.Tests;
 
+/// <summary>
+/// Unit tests for the JsonTryConvert class, covering serialization and deserialization scenarios.
+/// </summary>
 [TestFixture]
 public class JsonTryConvertTests
 {
+    /// <summary>
+    /// Dummy class for testing serialization and deserialization.
+    /// </summary>
     public class Dummy
     {
+        /// <summary>
+        /// Gets or sets the Id.
+        /// </summary>
         public int Id { get; set; }
+        /// <summary>
+        /// Gets or sets the Name.
+        /// </summary>
         public string? Name { get; set; }
     }
 
+    /// <summary>
+    /// Tests serialization and deserialization using explicit object type.
+    /// </summary>
     [Test]
     public void TrySerializeAndDeserialize_ObjectType_Success()
     {
@@ -25,6 +40,9 @@ public class JsonTryConvertTests
         Assert.AreEqual("abc", ((Dummy)result!).Name);
     }
 
+    /// <summary>
+    /// Tests generic serialization and deserialization.
+    /// </summary>
     [Test]
     public void TrySerializeAndDeserialize_Generic_Success()
     {
@@ -37,6 +55,9 @@ public class JsonTryConvertTests
         Assert.AreEqual("xyz", result.Name);
     }
 
+    /// <summary>
+    /// Tests serialization with an invalid object type.
+    /// </summary>
     [Test]
     public void TrySerialize_InvalidObjectType_Success()
     {
@@ -44,6 +65,9 @@ public class JsonTryConvertTests
         Assert.IsNotNull(json);
     }
 
+    /// <summary>
+    /// Tests deserialization with invalid JSON input.
+    /// </summary>
     [Test]
     public void TryDeserialize_InvalidJson_Fails()
     {
@@ -51,6 +75,9 @@ public class JsonTryConvertTests
         Assert.IsNull(value);
     }
 
+    /// <summary>
+    /// Tests serialization and deserialization with formatting and converters.
+    /// </summary>
     [Test]
     public void TrySerializeAndDeserialize_WithFormattingAndConverters()
     {
@@ -64,6 +91,9 @@ public class JsonTryConvertTests
         Assert.AreEqual("test", result.Name);
     }
 
+    /// <summary>
+    /// Tests serialization and deserialization of a null value.
+    /// </summary>
     [Test]
     public void TrySerializeAndDeserialize_NullValue()
     {
