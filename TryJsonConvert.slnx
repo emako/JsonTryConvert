@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="src/TryJsonConvert.csproj" />
+  <Project Path="tests/TryJsonConvert.Tests.csproj" />
 </Solution>
