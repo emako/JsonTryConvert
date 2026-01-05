@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Diagnostics;
 
 namespace Newtonsoft.Json;
 
@@ -51,8 +52,10 @@ public static partial class JsonTryConvert
             value = token.ToObject(objectType, JsonSerializer.Create(settings));
             return true;
         }
-        catch
+        catch (Exception e)
         {
+            if (Debugger.IsAttached)
+                Debug.WriteLine(e);
             return false;
         }
     }
