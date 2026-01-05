@@ -1,4 +1,4 @@
-![logo](branding/titlebar.png)
+![logo](https://raw.githubusercontent.com/emako/JsonTryConvert/refs/heads/master/branding/titlebar.png)
 
 [![GitHub license](https://img.shields.io/github/license/emako/JsonTryConvert)](https://github.com/emako/JsonTryConvert/blob/master/LICENSE) [![NuGet](https://img.shields.io/nuget/v/JsonTryConvert.svg)](https://nuget.org/packages/JsonTryConvert) [![Actions](https://github.com/emako/JsonTryConvert/actions/workflows/library.nuget.yml/badge.svg)](https://github.com/emako/JsonTryConvert/actions/workflows/library.nuget.yml)
 
