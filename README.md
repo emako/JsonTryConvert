@@ -11,7 +11,7 @@ It is compatible with .NET Standard, .NET Core, .NET Framework, and .NET 5/6/7/8
 ## Features
 - Safe `TrySerialize` and `TryDeserialize` methods for JSON conversion
 - Overloads for type, formatting, and custom converters
-- No exceptions thrown on failure¡ªreturns `false` and outputs `null`
+- No exceptions thrown on failure - returns `false` and outputs `null`
 - Supports all major .NET platforms
 
 ## Installation
