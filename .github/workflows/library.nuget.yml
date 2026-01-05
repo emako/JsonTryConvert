@@ -20,13 +20,13 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Install dependencies
-        run: dotnet restore src\TryJsonConvert.csproj
+        run: dotnet restore src\JsonTryConvert.csproj
 
       - name: Build
-        run: dotnet build src\TryJsonConvert.csproj --configuration Release --no-restore
+        run: dotnet build src\JsonTryConvert.csproj --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack src\TryJsonConvert.csproj -c Release --no-build -o out
+        run: dotnet pack src\JsonTryConvert.csproj -c Release --no-build -o out
 
       - name: Push NuGet package
         # run:  dotnet nuget push "out\*.nupkg" -k ${{secrets.NUGET_AUTH_TOKEN}} --source https://api.nuget.org/v3/index.json

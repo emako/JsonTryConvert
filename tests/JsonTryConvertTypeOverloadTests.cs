@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace TryJsonConvert.Tests;
+namespace JsonTryConvert.Tests;
 
 /// <summary>
 /// Unit tests for type overload scenarios in JsonTryConvert.
@@ -19,6 +19,7 @@ public class JsonTryConvertTypeOverloadTests
         /// Gets or sets the Id.
         /// </summary>
         public int Id { get; set; }
+
         /// <summary>
         /// Gets or sets the Name.
         /// </summary>

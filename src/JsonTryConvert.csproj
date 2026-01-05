@@ -4,14 +4,14 @@
     <LangVersion>preview</LangVersion>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>TryJsonConvert</PackageId>
+    <PackageId>JsonTryConvert</PackageId>
     <AssemblyVersion>13.0.4</AssemblyVersion>
     <FileVersion>13.0.4</FileVersion>
     <Version>$(VersionPrefix)13.0.4</Version>
     <Authors>ema</Authors>
     <Description>Provides try-method extensions for Newtonsoft.Json to safely attempt serialization and deserialization.</Description>
-    <PackageProjectUrl>https://github.com/emako/TryJsonConvert</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/emako/TryJsonConvert</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/emako/JsonTryConvert</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/emako/JsonTryConvert</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>json converter</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

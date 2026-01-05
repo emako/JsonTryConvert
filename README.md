@@ -1,10 +1,12 @@
 ![logo](branding/titlebar.png)
 
-[![GitHub license](https://img.shields.io/github/license/emako/TryJsonConvert)](https://github.com/emako/TryJsonConvert/blob/master/LICENSE) [![NuGet](https://img.shields.io/nuget/v/TryJsonConvert.svg)](https://nuget.org/packages/TryJsonConvert) [![Actions](https://github.com/emako/TryJsonConvert/actions/workflows/library.nuget.yml/badge.svg)](https://github.com/emako/TryJsonConvert/actions/workflows/library.nuget.yml)
+[![GitHub license](https://img.shields.io/github/license/emako/JsonTryConvert)](https://github.com/emako/JsonTryConvert/blob/master/LICENSE) [![NuGet](https://img.shields.io/nuget/v/JsonTryConvert.svg)](https://nuget.org/packages/JsonTryConvert) [![Actions](https://github.com/emako/JsonTryConvert/actions/workflows/library.nuget.yml/badge.svg)](https://github.com/emako/JsonTryConvert/actions/workflows/library.nuget.yml)
 
-# TryJsonConvert
+# JsonTryConvert
 
-TryJsonConvert provides safe, exception-free try-method extensions for [Newtonsoft.Json](https://www.newtonsoft.com/json) to attempt serialization and deserialization. It is compatible with .NET Standard, .NET Core, .NET Framework, and .NET 5/6/7/8/9/10.
+JsonTryConvert provides safe, exception-free try-method extensions for [Newtonsoft.Json](https://www.newtonsoft.com/json) to attempt serialization and deserialization.
+
+It is compatible with .NET Standard, .NET Core, .NET Framework, and .NET 5/6/7/8/9/10.
 
 ## Features
 - Safe `TrySerialize` and `TryDeserialize` methods for JSON conversion
@@ -16,13 +18,13 @@ TryJsonConvert provides safe, exception-free try-method extensions for [Newtonso
 Install from NuGet:
 
 ```shell
-Install-Package TryJsonConvert
+Install-Package JsonTryConvert
 ```
 
 Or via .NET CLI:
 
 ```shell
-dotnet add package TryJsonConvert
+dotnet add package JsonTryConvert
 ```
 
 ## Usage
